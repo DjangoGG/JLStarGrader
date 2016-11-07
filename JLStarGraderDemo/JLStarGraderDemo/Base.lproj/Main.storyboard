@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF5-iG-blA">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNk-LJ-GYR">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKX-Xh-HvG" customClass="JLStarGrader">
+                                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="6YF-wd-a2U"/>
+                                                    <constraint firstAttribute="width" constant="150" id="bZM-oF-5dv"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC0-0A-g90">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.78600261606666677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="SKX-Xh-HvG" firstAttribute="centerX" secondItem="mNk-LJ-GYR" secondAttribute="centerX" id="Q90-Tg-v48"/>
+                                            <constraint firstItem="SKX-Xh-HvG" firstAttribute="centerY" secondItem="mNk-LJ-GYR" secondAttribute="centerY" id="aSJ-9I-12g"/>
+                                            <constraint firstItem="tC0-0A-g90" firstAttribute="top" secondItem="SKX-Xh-HvG" secondAttribute="bottom" constant="12" id="gtt-wD-r5X"/>
+                                            <constraint firstItem="tC0-0A-g90" firstAttribute="centerX" secondItem="SKX-Xh-HvG" secondAttribute="centerX" id="jkq-Av-3d4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.78313802683333344" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mNk-LJ-GYR" firstAttribute="leading" secondItem="CF5-iG-blA" secondAttribute="leading" id="8g3-N9-950"/>
+                                    <constraint firstItem="mNk-LJ-GYR" firstAttribute="height" secondItem="CF5-iG-blA" secondAttribute="height" constant="1" id="9xo-yH-dmg"/>
+                                    <constraint firstAttribute="bottom" secondItem="mNk-LJ-GYR" secondAttribute="bottom" id="PzR-z1-VHk"/>
+                                    <constraint firstItem="mNk-LJ-GYR" firstAttribute="top" secondItem="CF5-iG-blA" secondAttribute="top" id="TmA-qG-Do2"/>
+                                    <constraint firstAttribute="trailing" secondItem="mNk-LJ-GYR" secondAttribute="trailing" id="Z5O-jj-sTd"/>
+                                    <constraint firstItem="mNk-LJ-GYR" firstAttribute="width" secondItem="CF5-iG-blA" secondAttribute="width" id="ekJ-7R-9iC"/>
+                                    <constraint firstAttribute="height" constant="300" id="y9r-eW-cf0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CF5-iG-blA" secondAttribute="trailing" id="2fD-qC-rqk"/>
+                            <constraint firstItem="CF5-iG-blA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dqd-Gh-Phs"/>
+                            <constraint firstItem="CF5-iG-blA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IBG-lQ-iyJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="CF5-iG-blA" id="ha6-rX-AVa"/>
+                        <outlet property="starGrader" destination="SKX-Xh-HvG" id="q8G-bL-nnt"/>
+                        <outlet property="tipLabel" destination="tC0-0A-g90" id="dKx-fX-S8D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
