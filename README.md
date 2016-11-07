@@ -1,8 +1,11 @@
 # JLStarGrader
+![示例图片](https://github.com/DjangoGG/JLStarGrader/raw/master/Resource/preview.png)
+
 项目中有去多用到评分的地方, 虽然github上已有许多类似轮子, 还是手痒, 参考了别人的代码, 自己撸了一个
 功能虽然很基础(简陋), 但也清晰易懂(自我感觉良好...)
 
-![示例图片](https://github.com/DjangoGG/JLStarGrader/raw/master/Resource/preview.png)
+* 支持滑动评分
+* 避免与scrollview的滑动冲突
 
 ```Objective-C
 /// 星星数量, 默认5
