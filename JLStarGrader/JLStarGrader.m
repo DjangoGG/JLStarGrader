@@ -113,27 +113,23 @@
 
 #pragma mark - Touch
 
-// 滑动开始
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.avoidConflictScrollView.scrollEnabled = NO;
 }
 
-// 滑动中
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self touchesRating:touches];
+    [self gradingTouches:touches];
 }
 
-// 滑动结束
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.avoidConflictScrollView.scrollEnabled = YES;
-    [self touchesRating:touches];
+    [self gradingTouches:touches];
 }
 
-/** 根据手指位置计算星数 */
-- (void)touchesRating:(NSSet *)touches
+- (void)gradingTouches:(NSSet *)touches
 {
     
     if (self.noEdit) {
